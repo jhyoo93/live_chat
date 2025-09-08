@@ -19,8 +19,13 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-websocket'   // WS(STOMP)
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'    // JPA
+    implementation 'org.springframework.boot:spring-boot-starter-validation'  // DTO 검증
+
+	runtimeOnly 'com.h2database:h2' // H2
+	//runtimeOnly 'com.mysql:mysql-connector-j' // MySQL
 	
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
